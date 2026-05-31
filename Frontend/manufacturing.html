@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="manufacturing.css">
+</head>
+
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-content">
+            <img src="image/logo.jpeg" alt="Logo">
+        </div>
+    </div>
+
+    <!-- ============================================================
+       HEADER - Logo + Desktop Navigation
+       ============================================================ -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="image/logo.jpeg" alt="Basilica Biotech Logo" style="height:50px;">
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav>
+                    <ul>
+                        <li><a href="./index.html" class="active">HOME</a></li>
+                        <li><a href="./about.html">ABOUT US</a></li>
+                        <li class="dropdown">
+                            <a href="#">PRODUCTS</a>
+                            <ul class="submenu">
+                                <li><a href="./skincare.html">Skin Care</a></li>
+                                <li><a href="./hair-care.html">Hair Care</a></li>
+                                <li><a href="./personal-care.html">Personal Care</a></li>
+                                <li><a href="./bath-soap.html">Bath Soap</a></li>
+                                <li><a href="./grooming.html">Grooming</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">MANUFACTURING</a></li>
+                        <li><a href="./private-label.html">PRIVATE LABEL</a></li>
+                        <li><a href="./why-us.html">WHY US</a></li>
+                        <li><a href="./contact-us.html">CONTACT US</a></li>
+                        <a href="#" class="btn-quote" onclick="openForm()">GET A QUOTE →</a>
+                    </ul>
+                </nav>
+
+                <!-- Hamburger (mobile only) -->
+                <div class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================
+       MOBILE NAVIGATION OVERLAY
+       ============================================================ -->
+    <div class="mobile-nav" id="mobileNav">
+        <span class="mobile-nav-close" onclick="toggleMenu()" aria-label="Close menu">✕</span>
+
+        <div class="logo">
+            <img src="image/logo.jpeg" alt="Basilica Biotech Logo" style="height:130px;width: 100%;">
+        </div>
+
+        <ul>
+            <li><a href="./index.html" onclick="toggleMobileMenu()">Home</a></li>
+            <li><a href="#" onclick="toggleMobileMenu()">About Us</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" onclick="toggleDropdown(event)">
+                    Products <i class="fas fa-chevron-down" style="font-size:9px;"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="./skincare.html" onclick="toggleMobileMenu()">Skin Care</a></li>
+                    <li><a href="./hair-care.html" onclick="toggleMobileMenu()">Hair Care</a></li>
+                    <li><a href="./personal-care.html" onclick="toggleMobileMenu()">Personal Care</a></li>
+                    <li><a href="./bath-soap.html" onclick="toggleMobileMenu()">Bath Soap</a></li>
+                    <li><a href="./grooming.html" onclick="toggleMobileMenu()">Grooming</a></li>
+                </ul>
+            </li>
+            <li><a href="./manufacturing.html" onclick="toggleMobileMenu()">MANUFACTURING</a></li>
+            <li><a href="./private-label.html" onclick="toggleMobileMenu()">Private Label</a></li>
+            <li><a href="./why-us.html" onclick="toggleMobileMenu()">Why Us</a></li>
+            <li><a href="./contact-us.html" onclick="toggleMobileMenu()">Contact Us</a></li>
+
+        </ul>
+
+        <a href="#" class="btn-quote btn-primary" style="margin-top:12px; justify-content:center;"
+            onclick="openForm()">GET A QUOTE →</a>
+    </div>
+
+    <div class="quote-modal" id="quoteModal">
+
+        <div class="quote-box">
+
+            <span class="close-btn" onclick="closeForm()">✕</span>
+
+            <h3>GET A FREE QUOTE</h3>
+
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="text" id="phone" placeholder="Mobile Number">
+            <input type="email" id="email" placeholder="Email Address">
+            <textarea id="requirement" placeholder="Your Requirement"></textarea>
+
+            <button onclick="sendWhatsApp()">SUBMIT NOW →</button>
+
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+       FLOATING CONTACT BUTTONS - Fixed right side
+       ============================================================ -->
+    <div class="floating-contact">
+        <div class="float-btn whatsapp">
+            <a href="https://wa.me/919104525207">
+                <i class="fab fa-whatsapp"></i>WhatsApp
+            </a>
+        </div>
+        <div class="float-btn">
+            <a href="tel:+919104525207">
+                <i class="fas fa-phone"></i>Call Us
+            </a>
+        </div>
+        <div class="float-btn">
+            <a href="mailto:basilicabiotech@gmail.com">
+                <i class="fas fa-envelope"></i>Email Us
+            </a>
+        </div>
+    </div>
+
+    <section class="hero">
+
+        <div class="hero-container">
+
+            <!-- HERO TEXT -->
+
+            <div class="hero-text">
+
+                <div>
+
+                    <h1 class="hero-heading">
+
+                        COSMETIC<br>
+                        MANUFACTURING
+
+                    </h1>
+
+                    <p class="hero-tagline">
+
+                        Precision. Purity. Perfection.
+
+                    </p>
+
+                    <p class="hero-desc">
+
+                        We manufacture high-quality skincare,
+                        haircare, and personal care products
+                        in state-of-the-art facilities,
+                        ensuring international quality
+                        standards at <br> every step.
+
+                    </p>
+
+                </div>
+
+                <!-- FEATURES -->
+
+                <div class="features-row">
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon-wrap">
+                            ⚗
+                        </div>
+
+                        <div class="feature-label">
+
+                            Advanced<br>
+                            Technology
+
+                        </div>
+
+                    </div>
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon-wrap">
+                            🏅
+                        </div>
+
+                        <div class="feature-label">
+
+                            Premium<br>
+                            Quality
+
+                        </div>
+
+                    </div>
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon-wrap">
+                            📋
+                        </div>
+
+                        <div class="feature-label">
+
+                            Strict Quality<br>
+                            Control
+
+                        </div>
+
+                    </div>
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon-wrap">
+                            🍃
+                        </div>
+
+                        <div class="feature-label">
+
+                            Safe & Clean<br>
+                            Formulation
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- HERO IMAGE -->
+
+            <div class="hero-image">
+
+                <img src="./image/hero-image.png" alt="Manufacturing">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================================
+         PROCESS SECTION
+    ========================================================= -->
+
+    <section class="process-section">
+
+        <div class="hero-container">
+            <!-- ITEM 1 -->
+
+            <div class="process-item">
+
+                <img class="process-img" src="./image/manufacturing-1.png" style="object-position: 10% center;"
+                    alt="Raw Material Testing">
+
+                <div class="step-label">
+
+                    <span class="step-num">
+                        01
+                    </span>
+
+                    <span class="step-text">
+
+                        Raw Material<br>
+                        Testing
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- ITEM 2 -->
+
+            <div class="process-item">
+
+                <img class="process-img" src="./image/manufacturing-2.png" style="object-position: 35% center;"
+                    alt="Formulation">
+
+                <div class="step-label">
+
+                    <span class="step-num">
+                        02
+                    </span>
+
+                    <span class="step-text">
+
+                        Formulation &<br>
+                        Production
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- ITEM 3 -->
+
+            <div class="process-item">
+
+                <img class="process-img" src="./image/manufacturing-3.png" style="object-position: 55% center;"
+                    alt="Packaging">
+
+                <div class="step-label">
+
+                    <span class="step-num">
+                        03
+                    </span>
+
+                    <span class="step-text">
+
+                        Filling &<br>
+                        Packaging
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- ITEM 4 -->
+
+            <div class="process-item">
+
+                <img class="process-img" src="./image/manufacturing-4.png" style="object-position: 75% center;"
+                    alt="Quality Check">
+
+                <div class="step-label">
+
+                    <span class="step-num">
+                        04
+                    </span>
+
+                    <span class="step-text">
+
+                        Quality<br>
+                        Check
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- ITEM 5 -->
+
+            <div class="process-item">
+
+                <img class="process-img" src="./image/manufacturing-5.png" style="object-position: 90% center;"
+                    alt="Final Packaging">
+
+                <div class="step-label">
+
+                    <span class="step-num">
+                        05
+                    </span>
+
+                    <span class="step-text">
+
+                        Final Product<br>
+                        Packaging
+
+                    </span>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- =========================================================
+         CERTIFICATION BAR
+    ========================================================= -->
+
+    <div class="cert-bar">
+
+        <div class="cert-item">
+
+            <div class="cert-icon">
+                🛡
+            </div>
+
+            <div class="cert-text">
+
+                GMP Certified<br>
+                Facility
+
+            </div>
+
+        </div>
+
+        <div class="cert-item">
+
+            <div class="cert-icon">
+                🏅
+            </div>
+
+            <div class="cert-text">
+
+                Quality<br>
+                Assured
+
+            </div>
+
+        </div>
+
+        <div class="cert-item">
+
+            <div class="cert-icon">
+                ⚗
+            </div>
+
+            <div class="cert-text">
+
+                Custom<br>
+                Formulation
+
+            </div>
+
+        </div>
+
+        <div class="cert-item">
+
+            <div class="cert-icon">
+                📦
+            </div>
+
+            <div class="cert-text">
+
+                Private Label & Third Party<br>
+                Manufacturing
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand column -->
+                <div class="footer-brand">
+                    <div class="logo" style="margin-bottom:10px;">
+                        <img src="image/logo.jpeg" alt="Basilica Biotech Logo">
+                    </div>
+                    <p>Innovating Skincare &amp; Haircare.<br>Shaping Beauty, Naturally.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61585043405731&rdid=0n70slkfGqsjhKSm&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1bGkNb9pus%2F#"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/basilica_biotech?igsh=YnUycXF1dW85MnRz"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/basilica-biotech" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@BasilicaBiotech" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+
+                    <!-- CATALOG BUTTON -->
+                    <div class="footer-catalog">
+                        <a href="./image/Basilica Biotech - Catalogue (1).pdf" target="_blank" class="catalog-btn">
+                            📄 Download Brochure
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./skincare.html">Products</a></li>
+                        <li><a href="./manufacturing.html">Manufacturing</a></li>
+                        <li><a href="./private-label.html">Private Label</a></li>
+                        <li><a href="./why-us.html">Why Us</a></li>
+                        <li><a href="./contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Products -->
+                <div class="footer-col">
+                    <h4>OUR PRODUCTS</h4>
+                    <ul>
+                        <li><a href="./skincare.html">Skin Care</a></li>
+                        <li><a href="./hair-care.html">Hair Care</a></li>
+                        <li><a href="./personal-care.html">Personal Care</a></li>
+                        <li><a href="./bath-soap.html">Bath Soap</a></li>
+                        <li><a href="./grooming.html">Grooming</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-col">
+                    <h4>CONTACT INFO</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>9104525207<br>9104525205</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@basilicabiotech.co</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a target="_blank"
+                            href="https://www.google.com/maps/place/BASILICA+BIOTECH/@21.2051359,72.990793,17z/data=!3m2!4b1!5s0x3be0437d55313df7:0xb4cf2a00963c18d3!4m6!3m5!1s0x3be045376a2ecc15:0x89c1683e712a002c!8m2!3d21.2051309!4d72.9933679!16s%2Fg%2F11y7b1z9x9?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D">
+                            <span>Makna, Surat</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom bar -->
+            <div class="footer-bottom">
+                <p>© 2024 BASILICA BIOTECH. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="main.js"></script>
+</body>
+
+</html>

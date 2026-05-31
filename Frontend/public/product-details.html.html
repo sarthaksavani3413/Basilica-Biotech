@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Basilica Biotech</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+        /* ============================================================
+           PRODUCT DETAIL PAGE STYLES
+           ============================================================ */
+        .product-detail-section {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .product-detail-image {
+            position: sticky;
+            top: 100px;
+        }
+
+        .product-detail-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            object-fit: cover;
+        }
+
+        .product-detail-content h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .product-detail-content .product-category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #6699CC, #4a7fb5);
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .product-detail-content .product-desc {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .detail-section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .detail-section-title i {
+            color: #6699CC;
+            font-size: 16px;
+        }
+
+        .detail-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+
+        .detail-list li {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-bottom: 10px;
+            transition: all 0.2s;
+        }
+
+        .detail-list li:hover {
+            border-color: #6699CC;
+            box-shadow: 0 2px 12px rgba(102, 153, 204, 0.1);
+        }
+
+        .detail-list li b {
+            color: #1e293b;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+        }
+
+        .detail-list li span {
+            display: block;
+            margin-top: 4px;
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.6;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            background: #6699CC;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+            margin-bottom: 30px;
+            transition: all 0.2s;
+        }
+
+        .back-btn:hover {
+            background: #4a7fb5;
+            transform: translateY(-1px);
+        }
+
+        .no-data-msg {
+            text-align: center;
+            padding: 60px 20px;
+            color: #94a3b8;
+            font-size: 16px;
+        }
+
+        .loading-spinner {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .loading-spinner i {
+            font-size: 32px;
+            color: #6699CC;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Empty state for no ingredients/benefits */
+        .empty-info {
+            color: #94a3b8;
+            font-style: italic;
+            font-size: 14px;
+            padding: 12px 0;
+        }
+
+        @media (max-width: 768px) {
+            .product-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .product-detail-image {
+                position: static;
+            }
+
+            .product-detail-image img {
+                max-width: 100%;
+            }
+
+            .product-detail-content h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-content">
+            <img src="/image/logo.jpeg" alt="Logo">
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <img src="/image/logo.jpeg" alt="Basilica Biotech Logo" style="height:50px;">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">HOME</a></li>
+                        <li><a href="/about.html">ABOUT US</a></li>
+                        <li class="dropdown">
+                            <a href="#">PRODUCTS</a>
+                            <ul class="submenu">
+                                <li><a href="/skincare.html">Skin Care</a></li>
+                                <li><a href="/hair-care.html">Hair Care</a></li>
+                                <li><a href="/personal-care.html">Personal Care</a></li>
+                                <li><a href="/bath-soap.html">Bath Soap</a></li>
+                                <li><a href="/grooming.html">Grooming</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/manufacturing.html">MANUFACTURING</a></li>
+                        <li><a href="/private-label.html">PRIVATE LABEL</a></li>
+                        <li><a href="/why-us.html">WHY US</a></li>
+                        <li><a href="/contact-us.html">CONTACT US</a></li>
+                        <a href="#" class="btn-quote" onclick="openForm()">GET A QUOTE →</a>
+                    </ul>
+                </nav>
+                <div class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+        <span class="mobile-nav-close" onclick="toggleMenu()" aria-label="Close menu">✕</span>
+        <div class="logo">
+            <img src="/image/logo.jpeg" alt="Basilica Biotech Logo" style="height:130px;width: 100%;">
+        </div>
+        <ul>
+            <li><a href="/index.html" onclick="toggleMobileMenu()">Home</a></li>
+            <li><a href="/about.html" onclick="toggleMobileMenu()">About Us</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" onclick="toggleDropdown(event)">
+                    Products <i class="fas fa-chevron-down" style="font-size:9px;"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="/skincare.html" onclick="toggleMobileMenu()">Skin Care</a></li>
+                    <li><a href="/hair-care.html" onclick="toggleMobileMenu()">Hair Care</a></li>
+                    <li><a href="/personal-care.html" onclick="toggleMobileMenu()">Personal Care</a></li>
+                    <li><a href="/bath-soap.html" onclick="toggleMobileMenu()">Bath Soap</a></li>
+                    <li><a href="/grooming.html" onclick="toggleMobileMenu()">Grooming</a></li>
+                </ul>
+            </li>
+            <li><a href="/manufacturing.html" onclick="toggleMobileMenu()">MANUFACTURING</a></li>
+            <li><a href="/private-label.html" onclick="toggleMobileMenu()">Private Label</a></li>
+            <li><a href="/why-us.html" onclick="toggleMobileMenu()">Why Us</a></li>
+            <li><a href="/contact-us.html" onclick="toggleMobileMenu()">Contact Us</a></li>
+        </ul>
+        <a href="#" class="btn-quote btn-primary" style="margin-top:12px; justify-content:center;"
+            onclick="openForm()">GET A QUOTE →</a>
+    </div>
+
+    <!-- QUOTE MODAL -->
+    <div class="quote-modal" id="quoteModal">
+        <div class="quote-box">
+            <span class="close-btn" onclick="closeForm()">✕</span>
+            <h3>GET A FREE QUOTE</h3>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="text" id="phone" placeholder="Mobile Number">
+            <input type="email" id="email" placeholder="Email Address">
+            <textarea id="requirement" placeholder="Your Requirement"></textarea>
+            <button onclick="sendWhatsApp()">SUBMIT NOW →</button>
+        </div>
+    </div>
+
+    <!-- FLOATING CONTACT -->
+    <div class="floating-contact">
+        <div class="float-btn whatsapp">
+            <a href="https://wa.me/919104525207"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+        </div>
+        <div class="float-btn">
+            <a href="tel:+919104525207"><i class="fas fa-phone"></i>Call Us</a>
+        </div>
+        <div class="float-btn">
+            <a href="mailto:basilicabiotech@gmail.com"><i class="fas fa-envelope"></i>Email Us</a>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAIL CONTENT -->
+    <section class="product-detail-section" id="productDetailSection">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner"></i>
+            <p>Loading product...</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo" style="margin-bottom:10px;">
+                        <img src="/image/logo.jpeg" alt="Basilica Biotech Logo">
+                    </div>
+                    <p>Innovating Skincare &amp; Haircare.<br>Shaping Beauty, Naturally.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61585043405731" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/basilica_biotech?igsh=YnUycXF1dW85MnRz"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/basilica-biotech" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@BasilicaBiotech" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="footer-catalog">
+                        <a href="/image/Basilica%20Biotech%20-%20Catalogue.pdf" target="_blank" class="catalog-btn">
+                            📄 Download Brochure
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/skincare.html">Products</a></li>
+                        <li><a href="/manufacturing.html">Manufacturing</a></li>
+                        <li><a href="/private-label.html">Private Label</a></li>
+                        <li><a href="/why-us.html">Why Us</a></li>
+                        <li><a href="/contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>OUR PRODUCTS</h4>
+                    <ul>
+                        <li><a href="/skincare.html">Skin Care</a></li>
+                        <li><a href="/hair-care.html">Hair Care</a></li>
+                        <li><a href="/personal-care.html">Personal Care</a></li>
+                        <li><a href="/bath-soap.html">Bath Soap</a></li>
+                        <li><a href="/grooming.html">Grooming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>CONTACT INFO</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>9104525207<br>9104525205</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@basilicabiotech.co</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a target="_blank" href="https://www.google.com/maps/place/BASILICA+BIOTECH/">
+                            <span>Makna, Surat</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 BASILICA BIOTECH. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/main.js"></script>
+    <script>
+        async function loadProductDetail() {
+            // Read URL Path for dynamic route e.g., /product/personalcare/face-wash
+            const pathParts = window.location.pathname.split('/').filter(Boolean);
+            let category = null;
+            let slug = null;
+
+            if (pathParts.length >= 3 && pathParts[0] === 'product') {
+                category = pathParts[1];
+                slug = pathParts[2];
+            } else {
+                // Fallback for old query param links just in case
+                const params = new URLSearchParams(window.location.search);
+                category = params.get('category');
+                slug = params.get('id');
+            }
+
+            const section = document.getElementById('productDetailSection');
+
+            if (!category || !slug) {
+                section.innerHTML = '<div class="no-data-msg"><h3>Product not found</h3><p>Missing category or product ID.</p></div>';
+                return;
+            }
+
+            try {
+                const res = await fetch('/api/site-data');
+                if (!res.ok) throw new Error('Failed to fetch data');
+                const data = await res.json();
+
+                // Support multiple response formats
+                const products =
+                    data.products?.[category] ||
+                    data.products?.[category.replace('-', '')] ||
+                    [];
+
+                // Utility function to convert name to slug dynamically
+                const createSlug = (text) => {
+                    return text.toString().toLowerCase()
+                        .replace(/\\s+/g, '-')
+                        .replace(/[^\\w\\-]+/g, '')
+                        .replace(/\\-\\-+/g, '-')
+                        .replace(/^-+/, '')
+                        .replace(/-+$/, '');
+                };
+
+                // Find product by matching either slugified name OR old id
+                const product = products.find(p => p.id === slug || createSlug(p.name) === slug);
+
+                if (!product) {
+                    section.innerHTML = '<div class="no-data-msg"><h3>Product not found</h3><p>This product does not exist.</p></div>';
+                    return;
+                }
+
+                // Build category display name
+                const categoryNames = {
+                    skincare: 'Skin Care',
+                    'skin-care': 'Skin Care',
+                    haircare: 'Hair Care',
+                    'hair-care': 'Hair Care',
+                    personalcare: 'Personal Care',
+                    'personal-care': 'Personal Care',
+                    bathsoap: 'Bath Soap',
+                    'bath-soap': 'Bath Soap',
+                    grooming: 'Grooming'
+                };
+                const catDisplay = categoryNames[category] || category;
+
+                // Build ingredients HTML
+                let ingredientsHTML = '';
+                const ingredients = product.keyIngredients || [];
+                if (ingredients.length > 0) {
+                    ingredientsHTML = `
+                        <h3 class="detail-section-title"><i class="fas fa-leaf"></i> Key Ingredients</h3>
+                        <ul class="detail-list">
+                            ${ingredients.map(item => `
+                                <li>
+                                    <b>${item.title || ''}</b>
+                                    ${item.description ? `<span>${item.description}</span>` : ''}
+                                </li>
+                            `).join('')}
+                        </ul>
+                    `;
+                }
+
+                // Build benefits HTML
+                let benefitsHTML = '';
+                const benefits = product.keyBenefits || [];
+                if (benefits.length > 0) {
+                    benefitsHTML = `
+                        <h3 class="detail-section-title"><i class="fas fa-star"></i> Key Benefits</h3>
+                        <ul class="detail-list">
+                            ${benefits.map(item => `
+                                <li>
+                                    <b>${item.title || ''}</b>
+                                    ${item.description ? `<span>${item.description}</span>` : ''}
+                                </li>
+                            `).join('')}
+                        </ul>
+                    `;
+                }
+
+                // Build back link
+                const categoryPages = {
+                    skincare: '/skincare.html',
+                    'skin-care': '/skincare.html',
+                    haircare: '/hair-care.html',
+                    'hair-care': '/hair-care.html',
+                    personalcare: '/personal-care.html',
+                    'personal-care': '/personal-care.html',
+                    bathsoap: '/bath-soap.html',
+                    'bath-soap': '/bath-soap.html',
+                    grooming: '/grooming.html'
+                };
+                const backLink = categoryPages[category] || '/index.html';
+
+                // Update page title
+                document.title = `${product.name} - Basilica Biotech`;
+
+                // Render
+                section.innerHTML = `
+                    <a href="${backLink}" class="back-btn"><i class="fas fa-arrow-left"></i> Back to ${catDisplay}</a>
+                    <div class="product-detail-grid">
+                        <div class="product-detail-image">
+                            <img src="/${product.image}" alt="${product.name}" onerror="this.src='/image/logo.jpeg'">
+                        </div>
+                        <div class="product-detail-content">
+                            <span class="product-category-badge">${catDisplay}</span>
+                            <h1>${product.name}</h1>
+                            ${product.description ? `<p class="product-desc">${product.description}</p>` : ''}
+                            ${ingredientsHTML}
+                            ${benefitsHTML}
+                            ${!ingredientsHTML && !benefitsHTML ? '<p class="empty-info">Detailed product information coming soon.</p>' : ''}
+                        </div>
+                    </div>
+                `;
+
+            } catch (err) {
+                console.error(err);
+                section.innerHTML = '<div class="no-data-msg"><h3>Failed to load product</h3><p>Please try again later.</p></div>';
+            }
+        }
+
+        loadProductDetail();
+    </script>
+</body>
+
+</html>

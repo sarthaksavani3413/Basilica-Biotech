@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Basilica Biotech</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./admin.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="../image/logo-bg-remove.png" alt="Logo">
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="#" class="active" data-section="overview"><i class="fas fa-th-large"></i> Dashboard</a></li>
+            <li><a href="#" data-section="categories"><i class="fas fa-grip-horizontal"></i> Categories</a></li>
+            <div class="nav-divider"></div>
+            <li><a href="#" data-section="products-skincare"><i class="fas fa-pump-soap"></i> Skin Care</a></li>
+            <li><a href="#" data-section="products-haircare"><i class="fas fa-spray-can-sparkles"></i> Hair Care</a>
+            </li>
+            <li><a href="#" data-section="products-personalcare"><i class="fas fa-bath"></i> Personal Care</a></li>
+            <li><a href="#" data-section="products-bathsoap"><i class="fas fa-soap"></i> Bath Soap</a></li>
+            <li><a href="#" data-section="products-grooming"><i class="fas fa-cut"></i>Grooming</a></li>
+            <div class="nav-divider"></div>
+        </ul>
+        <div class="sidebar-bottom">
+            <button class="btn-logout" onclick="handleLogout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="admin-main">
+        <header class="admin-header">
+            <div style="display:flex;align-items:center;gap:12px;">
+                <button class="hamburger-admin" onclick="document.getElementById('sidebar').classList.toggle('open')"><i
+                        class="fas fa-bars"></i></button>
+                <h2 id="headerTitle">Dashboard</h2>
+            </div>
+            <div class="header-actions">
+                <a href="/" target="_blank" class="btn-view-site"><i class="fas fa-external-link-alt"></i> View
+                    Website</a>
+            </div>
+        </header>
+
+        <div class="admin-content" id="adminContent">
+            <!-- Content loaded dynamically by JS -->
+            <div class="section-panel active" id="panel-overview">
+                <div class="panel-header">
+                    <div>
+                        <h3>Dashboard Overview</h3>
+                        <p>Welcome back, Admin!</p>
+                    </div>
+                </div>
+                <div class="overview-grid" id="overviewGrid"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMsg">Saved!</span></div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="editModal">
+        <div class="modal-box" id="modalContent"></div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

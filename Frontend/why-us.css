@@ -1,0 +1,639 @@
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+:root {
+
+    --blue-dark: #1b3a6b;
+
+    --blue-mid: #2c5a9a;
+
+    --blue-accent: #3a72b8;
+
+    --blue-light: #5b8fd4;
+
+    --blue-pale: #dce9f8;
+
+    --blue-banner: #2e5d9c;
+
+    --blue-footer: #2a4f7a;
+
+    --white: #ffffff;
+
+    --bg-page: #f4f8fd;
+
+    --bg-hero: #eef4fb;
+
+    --text-dark: #1a2d45;
+
+    --text-body: #3d5068;
+
+    --border: #d0e2f5;
+}
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+
+    background: #fff;
+
+    color: var(--text-dark);
+
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+
+    width: 100%;
+
+    background: var(--bg-hero);
+
+    overflow: hidden;
+
+    padding-bottom: 0;
+}
+
+.hero-container {
+
+    width: 100%;
+
+    max-width: 1320px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 530px 1fr;
+
+    max-height: 500px;
+}
+
+/* =========================
+   HERO LEFT
+========================= */
+
+.hero-left {
+
+    padding: 52px 44px 48px 56px;
+
+    background: var(--bg-hero);
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.hero-left h1 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 46px;
+
+    font-weight: 700;
+
+    line-height: .92;
+
+    color: var(--blue-accent);
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+.hero-sub {
+
+    font-size: 23px;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+
+    color: var(--blue-accent);
+
+    margin-bottom: 18px;
+}
+
+.hero-desc {
+
+    font-size: 14.5px;
+
+    line-height: 1.7;
+
+    max-width: 390px;
+
+    color: var(--text-body);
+
+    margin-bottom: 28px;
+}
+
+.hero-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    background: var(--border);
+
+    margin-bottom: 28px;
+}
+
+/* =========================
+   CERTIFICATES
+========================= */
+
+.certs-row {
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.cert-badge {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.cert-circle {
+
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 50%;
+
+    border: 2px solid var(--blue-accent);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #fff;
+}
+
+.cert-circle img {
+
+    width: 32px;
+
+    height: 32px;
+
+    object-fit: contain;
+}
+
+.cert-name {
+
+    font-size: 10px;
+
+    text-align: center;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-photo {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 560px;
+}
+
+.hero-photo img {
+
+    width: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+}
+
+.hero-photo::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(to right,
+            rgba(238, 244, 251, 1) 0%,
+            rgba(238, 244, 251, 0.55) 12%,
+            rgba(238, 244, 251, 0) 24%);
+
+    z-index: 1;
+}
+
+/* =========================================================
+   VISION BANNER
+========================================================= */
+
+.vision-banner {
+
+    background: var(--blue-banner);
+
+    text-align: center;
+
+    padding: 22px 40px;
+}
+
+.vision-top {
+
+    color: #fff;
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    margin-bottom: 6px;
+}
+
+.vision-sub {
+
+    color: rgba(255, 255, 255, .85);
+
+    font-size: 15px;
+}
+
+/* =========================================================
+   FEATURES SECTION
+========================================================= */
+
+.features-section {
+
+    width: 100%;
+
+    background: var(--bg-page);
+
+    padding: 52px 20px;
+}
+
+.features-container {
+
+    width: 100%;
+
+    max-width: 1320px;
+
+    margin: 0 auto;
+}
+
+.features-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+.feat-item {
+
+    display: flex;
+
+    gap: 16px;
+}
+
+.feat-icon-wrap {
+
+    width: 58px;
+
+    height: 58px;
+
+    background: var(--blue-accent);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #fff;
+
+    font-size: 24px;
+
+    flex-shrink: 0;
+}
+
+.feat-title {
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: var(--blue-dark);
+
+    margin-bottom: 7px;
+
+    text-transform: uppercase;
+}
+
+.feat-desc {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: var(--text-body);
+}
+
+/* =========================================================
+   FOOTER BAR
+========================================================= */
+
+.footer-bar {
+
+    background: var(--blue-footer);
+
+    padding: 18px 40px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.footer-item {
+
+    color: #fff;
+
+    padding: 10px 24px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1200px) {
+
+    .hero-container {
+
+        grid-template-columns: 420px 1fr;
+    }
+
+    .hero-h1 {
+
+        font-size: 60px;
+    }
+
+    .features-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:992px) {
+
+    .hero-container {
+
+        grid-template-columns: 360px 1fr;
+    }
+
+    .hero-left {
+
+        padding: 40px 30px;
+    }
+
+    .hero-h1 {
+
+        font-size: 52px;
+    }
+
+    .hero-photo {
+
+        min-height: 500px;
+    }
+}
+
+@media(max-width:860px) {
+
+    .hero-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .hero-left {
+
+        padding: 40px 24px;
+    }
+
+    .hero-photo {
+
+        min-height: 360px;
+    }
+
+    .hero-photo::before {
+
+        background:
+            linear-gradient(to top,
+                rgba(238, 244, 251, 1) 0%,
+                rgba(238, 244, 251, 0.35) 20%,
+                rgba(238, 244, 251, 0) 40%);
+    }
+
+    .certs-row {
+
+        justify-content: center;
+    }
+}
+
+@media(max-width:640px) {
+
+    .hero-left {
+
+        padding: 30px 20px;
+    }
+
+    .hero-h1 {
+
+        font-size: 42px;
+    }
+
+    .hero-sub {
+
+        font-size: 18px;
+    }
+
+    .hero-desc {
+
+        max-width: 100%;
+
+        font-size: 14px;
+    }
+
+    .certs-row {
+
+        gap: 14px;
+
+        justify-content: center;
+    }
+
+    .cert-circle {
+
+        width: 52px;
+
+        height: 52px;
+    }
+
+    .cert-circle img {
+
+        width: 26px;
+
+        height: 26px;
+    }
+
+    .vision-banner {
+
+        padding: 18px 20px;
+    }
+
+    .vision-top {
+
+        font-size: 20px;
+    }
+
+    .vision-sub {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+    .features-section {
+
+        padding: 40px 20px;
+    }
+
+    .features-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+    }
+
+    .feat-item {
+
+        gap: 14px;
+    }
+
+    .feat-icon-wrap {
+
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 20px;
+    }
+
+    .footer-bar {
+
+        padding: 14px 20px;
+    }
+
+    .footer-item {
+
+        width: 100%;
+
+        text-align: center;
+
+        padding: 8px 0;
+    }
+}
+
+@media(max-width:480px) {
+
+    .hero-h1 {
+
+        font-size: 34px;
+    }
+
+    .hero-left h1 {
+
+        font-size: 32px;
+
+    }
+
+    .hero-sub {
+
+        font-size: 16px;
+    }
+
+    .hero-desc {
+
+        font-size: 13px;
+
+        line-height: 1.8;
+    }
+
+    .hero-photo {
+
+        min-height: 280px;
+    }
+
+    .cert-name {
+
+        font-size: 9px;
+    }
+
+    .vision-top {
+
+        font-size: 18px;
+    }
+
+    .vision-sub {
+
+        font-size: 13px;
+    }
+
+    .feat-title {
+
+        font-size: 13px;
+    }
+
+    .feat-desc {
+
+        font-size: 12px;
+    }
+}

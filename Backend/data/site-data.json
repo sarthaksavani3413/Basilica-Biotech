@@ -1,0 +1,1198 @@
+{
+  "categories": [
+    {
+      "id": "cat-1",
+      "name": "SKIN CARE",
+      "description": "Face Wash, Creams, Serums, Moisturizers & more.",
+      "image": "image/category-1.png",
+      "link": "./skincare.html"
+    },
+    {
+      "id": "cat-2",
+      "name": "HAIR CARE",
+      "description": "Shampoo, Conditioner, Hair Oil, Hair Serum & more.",
+      "image": "image/category-2.png",
+      "link": "./hair-care.html"
+    },
+    {
+      "id": "cat-3",
+      "name": "BODY CARE",
+      "description": "Body Wash, Lotion, Scrubs, Body Butter & more.",
+      "image": "image/category-3.png",
+      "link": "./personal-care.html"
+    },
+    {
+      "id": "cat-4",
+      "name": "BABY CARE",
+      "description": "Gentle & Safe Products for Delicate Skin.",
+      "image": "image/category-4.png",
+      "link": "./bath-soap.html"
+    },
+    {
+      "id": "cat-5",
+      "name": "PRIVATE LABEL",
+      "description": "Custom formulation & private label manufacturing.",
+      "image": "image/category-5.png",
+      "link": "./private-label.html"
+    }
+  ],
+  "products": {
+    "skincare": [
+      {
+        "id": "sk-1",
+        "name": "Alpha Arbutin Serum",
+        "description": "A brightening serum that reduces dark spots, pigmentation, and uneven skin tone.",
+        "image": "image/Skin-care-1.jpeg",
+        "slug": "alpha-arbutin-serum",
+        "keyIngredients": [
+          {
+            "title": "Alpha Arbutin 2%",
+            "description": "Helps fade pigmentation, dark spots, acne scars, and uneven skin tone by reducing melanin production."
+          },
+          {
+            "title": "Niacinamide",
+            "description": "Brightens skin and minimizes pores."
+          },
+          {
+            "title": "Hyaluronic Acid",
+            "description": "Hydrates and plumps the skin."
+          },
+          {
+            "title": "Licorice Extract",
+            "description": "Brightens skin and reduces discoloration."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Fades Dark Spots",
+            "description": "Helps reduce acne marks, pigmentation, and stubborn dark spots for clearer skin."
+          },
+          {
+            "title": "Brightens Skin",
+            "description": "Enhances natural radiance and promotes a more even skin tone."
+          },
+          {
+            "title": "Hydrates Skin",
+            "description": "Provides deep moisture to keep the skin soft, smooth, and plump."
+          },
+          {
+            "title": "Evens Skin Tone",
+            "description": "Promotes a clearer complexion."
+          }
+        ]
+      },
+      {
+        "id": "sk-2",
+        "name": "Glycolic Niacinamide Serum",
+        "description": "An exfoliating serum that smooths skin, brightens complexion, and reduces blemishes.",
+        "image": "image/Skin-care-2.jpeg",
+        "slug": "glycolic-niacinamide-serum",
+        "keyIngredients": [
+          {
+            "title": "Glycolic Acid 10%",
+            "description": "Exfoliates dead skin cells and improves skin texture."
+          },
+          {
+            "title": "Niacinamide 2%",
+            "description": "Brightens skin and minimizes pores."
+          },
+          {
+            "title": "Hyaluronic Acid",
+            "description": "Hydrates and plumps the skin."
+          },
+          {
+            "title": "Aloe Vera Extract",
+            "description": "Soothes and calms the skin."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Smooths Skin",
+            "description": "Refines rough and uneven texture."
+          },
+          {
+            "title": "Brightens Skin",
+            "description": "Improves radiance and clarity."
+          },
+          {
+            "title": "Reduces Blemishes",
+            "description": "Helps fade marks and unclog pores."
+          },
+          {
+            "title": "Minimizes Pores",
+            "description": "Makes pores appear smaller."
+          }
+        ]
+      },
+      {
+        "id": "sk-3",
+        "name": "Salicylic Serum",
+        "description": "An acne-control serum that unclogs pores, reduces breakouts, and clears skin.",
+        "image": "image/Skin-care-3.jpeg",
+        "slug": "salicylic-serum",
+        "keyIngredients": [
+          {
+            "title": "Salicylic Acid 2%",
+            "description": "Exfoliates pores and helps reduce acne."
+          },
+          {
+            "title": "Niacinamide",
+            "description": "Controls oil and improves skin texture."
+          },
+          {
+            "title": "Zinc PCA",
+            "description": "Balances sebum and minimizes blemishes."
+          },
+          {
+            "title": "Aloe Vera Extract",
+            "description": "Soothes and calms irritated skin."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Clears Acne",
+            "description": "Helps reduce pimples and breakouts."
+          },
+          {
+            "title": "Unclogs Pores",
+            "description": "Removes excess oil and impurities"
+          },
+          {
+            "title": "Controls Oil",
+            "description": "Keeps skin fresh and balanced."
+          },
+          {
+            "title": "Prevents Breakouts",
+            "description": "Helps stop new acne formation."
+          }
+        ]
+      },
+      {
+        "id": "sk-4",
+        "name": "Vitamin C Serum",
+        "description": "A brightening serum that reduces dullness, dark spots, and uneven skin tone.",
+        "image": "image/Skin-care-4.jpeg",
+        "slug": "vitamin-c-serum",
+        "keyIngredients": [
+          {
+            "title": "Vitamin C 15%",
+            "description": "Brightens skin and fades dark spots."
+          },
+          {
+            "title": "Hyaluronic Acid",
+            "description": "Hydrates and plumps the skin."
+          },
+          {
+            "title": "Vitamin E",
+            "description": "Protects and nourishes the skin."
+          },
+          {
+            "title": "Ferulic Acid",
+            "description": "Boosts antioxidant protection."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Brightens Skin",
+            "description": "Improves skin radiance."
+          },
+          {
+            "title": "Fades Dark Spots",
+            "description": "Reduces pigmentation marks."
+          },
+          {
+            "title": "Evens Skin Tone",
+            "description": "Promotes a clearer complexion."
+          },
+          {
+            "title": "Boosts Glow",
+            "description": "Gives skin a healthy shine."
+          }
+        ]
+      },
+      {
+        "id": "sk-5",
+        "name": "AHA BHA Serum",
+        "description": "An exfoliating serum that clears pores, smooths skin, and improves overall texture.",
+        "image": "image/Skin-care-5.jpeg",
+        "slug": "aha-bha-serum",
+        "keyIngredients": [
+          {
+            "title": "Glycolic Acid",
+            "description": "Exfoliates dead skin cells and brightens skin."
+          },
+          {
+            "title": "Lactic Acid",
+            "description": "Smooths skin and improves texture."
+          },
+          {
+            "title": "Salicylic Acid",
+            "description": "Unclogs pores and reduces acne."
+          },
+          {
+            "title": "Hyaluronic Acid",
+            "description": "Hydrates and plumps the skin."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Exfoliates Skin",
+            "description": "Removes dead skin cells."
+          },
+          {
+            "title": "Unclogs Pores",
+            "description": "Clears oil and impurities."
+          },
+          {
+            "title": "Smooths Texture",
+            "description": "Refines rough skin."
+          },
+          {
+            "title": "Brightens Skin",
+            "description": "Improves skin clarity."
+          }
+        ]
+      },
+      {
+        "id": "sk-6",
+        "name": "24K Gold Serum",
+        "description": "A premium gold-infused serum that hydrates, brightens, and nourishes the skin for a radiant glow.",
+        "image": "image/Skin-care-6.jpeg",
+        "slug": "24k-gold-serum",
+        "keyIngredients": [
+          {
+            "title": "24K Gold Extract",
+            "description": "Enhances skin radiance and glow."
+          },
+          {
+            "title": "Vitamin C",
+            "description": "Brightens skin and improves tone."
+          },
+          {
+            "title": "Hyaluronic Acid",
+            "description": "Provides deep hydration to the skin."
+          },
+          {
+            "title": "Niacinamide",
+            "description": "Helps smooth and refine skin texture."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Boosts Glow",
+            "description": "Gives skin a radiant appearance."
+          },
+          {
+            "title": "Deep Hydration",
+            "description": "Keeps skin soft and moisturized."
+          },
+          {
+            "title": "Improves Texture",
+            "description": "Makes skin smoother and healthier."
+          },
+          {
+            "title": "Brightens Skin",
+            "description": "Enhances natural skin brightness."
+          }
+        ]
+      },
+      {
+        "id": "sk-7",
+        "name": "Skin Brightening Serum",
+        "description": "A lightweight brightening serum that helps improve skin glow, reduce dullness, and promote an even skin tone.",
+        "image": "image/Skin-care-7.jpeg",
+        "slug": "skin-brightening-serum",
+        "keyIngredients": [
+          {
+            "title": "Vitamin C",
+            "description": "Brightens skin and reduces dullness."
+          },
+          {
+            "title": "Niacinamide",
+            "description": "Improves skin texture and tone."
+          },
+          {
+            "title": "Licorice Extract",
+            "description": "Helps reduce dark spots and pigmentation."
+          },
+          {
+            "title": "Hyaluronic Acid",
+            "description": "Provides deep hydration and softness."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Brightens Skin",
+            "description": "Enhances natural skin radiance."
+          },
+          {
+            "title": "Evens Skin Tone",
+            "description": "Helps reduce uneven pigmentation."
+          },
+          {
+            "title": "Hydrates Deeply",
+            "description": "Keeps skin moisturized and smooth."
+          },
+          {
+            "title": "Improves Texture",
+            "description": "Makes skin soft and healthy-looking."
+          }
+        ]
+      },
+      {
+        "id": "sk-8",
+        "name": "Kumkumadi Face Serum",
+        "description": "An Ayurvedic glow-boosting serum that nourishes, brightens, and revitalizes the skin for a healthy radiant look.",
+        "image": "image/Skin-care-8.jpeg",
+        "slug": "kumkumadi-face-serum",
+        "keyIngredients": [
+          {
+            "title": "Kumkumadi Oil",
+            "description": "Helps improve skin glow and complexion."
+          },
+          {
+            "title": "Saffron Extract",
+            "description": "Brightens skin and enhances radiance."
+          },
+          {
+            "title": "Sandalwood Extract",
+            "description": "Soothes and refreshes the skin."
+          },
+          {
+            "title": "Almond Oil",
+            "description": "Provides deep nourishment and softness."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Boosts Radiance",
+            "description": "Gives skin a natural healthy glow."
+          },
+          {
+            "title": "Deep Nourishment",
+            "description": "Keeps skin soft and hydrated."
+          },
+          {
+            "title": "Improves Skin Tone",
+            "description": "Helps achieve an even complexion."
+          },
+          {
+            "title": "Revitalizes Skin",
+            "description": "Makes skin look fresh and youthful."
+          }
+        ]
+      },
+      {
+        "id": "sk-9",
+        "name": "Face Wash",
+        "slug": "face-wash",
+        "description": "Face Wash is most of used",
+        "image": "uploads/image-1779438796898-650620350.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-10",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "Sunscreen is most of used",
+        "image": "uploads/image-1779438857341-829377594.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-11",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "Sunscreen is most of used",
+        "image": "uploads/image-1779439087318-246469228.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-12",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "Sunscreen is most of used",
+        "image": "uploads/image-1779439116126-582917807.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-13",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "Sunscreen is most of used",
+        "image": "uploads/image-1779439144235-563560632.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-14",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "Sunscreen is most of used",
+        "image": "uploads/image-1779439236316-524372043.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-15",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "Sunscreen is most of used",
+        "image": "uploads/image-1779439333185-622885564.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-16",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "Sunscreen is most of used",
+        "image": "uploads/image-1779439388280-293340575.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-17",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "Sunscreen is most of used",
+        "image": "uploads/image-1779439437910-931111363.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-18",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "Sunscreen is most of used",
+        "image": "uploads/image-1779439454276-251513230.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-19",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "Sunscreen is most of used",
+        "image": "uploads/image-1779439481068-7699691.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-20",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "Sunscreen is most of used",
+        "image": "uploads/image-1779439497188-669446339.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-21",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "Sunscreen is most of used",
+        "image": "uploads/image-1779439518158-647514827.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-22",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "Sunscreen is most of used",
+        "image": "uploads/image-1780064457177-872723007.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-23",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "sunscreen is most of used",
+        "image": "uploads/image-1779891382347-691068590.jpeg",
+        "keyIngredients": [],
+        "keyBenefits": []
+      },
+      {
+        "id": "sk-24",
+        "name": "Sunscreen",
+        "slug": "sunscreen",
+        "description": "Sunscreen",
+        "image": "uploads/image-1780153148018-731975518.jpeg",
+        "keyIngredients": [
+          {
+            "title": "sdfgh",
+            "description": "cvghj"
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "cvghj",
+            "description": "fghjk"
+          }
+        ]
+      }
+    ],
+    "haircare": [
+      {
+        "id": "hc-1",
+        "name": "Face Wash",
+        "description": "Deep cleansing formula for glowing and healthy skin.",
+        "image": "image/Skin-care-1.jpeg"
+      },
+      {
+        "id": "hc-2",
+        "name": "Moisturizer",
+        "description": "Hydrates and nourishes your skin all day long.",
+        "image": "image/Skin-care-2.jpeg"
+      },
+      {
+        "id": "hc-3",
+        "name": "Sunscreen",
+        "description": "Protects skin from harmful UV rays and sun damage.",
+        "image": "image/Skin-care-3.jpeg"
+      },
+      {
+        "id": "hc-4",
+        "name": "Serum",
+        "description": "Advanced formula for bright and youthful skin.",
+        "image": "image/Skin-care-4.jpeg"
+      },
+      {
+        "id": "hc-5",
+        "name": "Face Wash",
+        "description": "Deep cleansing formula for glowing and healthy skin.",
+        "image": "image/Skin-care-5.jpeg"
+      },
+      {
+        "id": "hc-6",
+        "name": "Moisturizer",
+        "description": "Hydrates and nourishes your skin all day long.",
+        "image": "image/Skin-care-6.jpeg"
+      },
+      {
+        "id": "hc-7",
+        "name": "Sunscreen",
+        "description": "Protects skin from harmful UV rays and sun damage.",
+        "image": "image/Skin-care-7.jpeg"
+      },
+      {
+        "id": "hc-8",
+        "name": "Serum",
+        "description": "Advanced formula for bright and youthful skin.",
+        "image": "image/Skin-care-8.jpeg"
+      }
+    ],
+    "personalcare": [
+      {
+        "id": "pc-1",
+        "name": "Rose Body Wash",
+        "description": "rose flavour",
+        "image": "image/Personal-care-1.jpeg",
+        "keyIngredients": [
+          {
+            "title": "Shea Butter",
+            "description": "Deeply nourishes and repairs dry, damaged skin barriers."
+          },
+          {
+            "title": "Glycerin",
+            "description": "Attracts moisture from the air to keep skin hydrated all day."
+          },
+          {
+            "title": "Vitamin E",
+            "description": "Powerful antioxidant that protects skin from environmental damage."
+          },
+          {
+            "title": "Almond Oil",
+            "description": "Softens skin texture and improves complexion over time."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "24-Hour Hydration",
+            "description": "Provides long-lasting moisture to keep skin soft throughout the day."
+          },
+          {
+            "title": "Non-Greasy Formula",
+            "description": "Absorbs quickly without leaving a sticky or oily residue."
+          },
+          {
+            "title": "Skin Softening",
+            "description": "Visibly improves skin smoothness and texture with regular use."
+          },
+          {
+            "title": "All Skin Types",
+            "description": "Gentle enough for normal, dry, oily, and sensitive skin."
+          }
+        ],
+        "slug": "rose-body-wash"
+      },
+      {
+        "id": "pc-2",
+        "name": "Green Apple Body Wash",
+        "description": "",
+        "image": "image/Personal-care-2.jpeg",
+        "keyIngredients": [
+          {
+            "title": "Tea Tree Oil",
+            "description": "Natural antibacterial agent that eliminates 99.9% of germs."
+          },
+          {
+            "title": "Aloe Vera Extract",
+            "description": "Soothes and conditions hands after washing."
+          },
+          {
+            "title": "Glycerin",
+            "description": "Prevents hands from drying out with repeated washing."
+          },
+          {
+            "title": "Lemon Essence",
+            "description": "Refreshing citrus fragrance that leaves hands smelling clean."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Antibacterial Protection",
+            "description": "Kills 99.9% of harmful bacteria and germs effectively."
+          },
+          {
+            "title": "Moisturizing",
+            "description": "Keeps hands soft and hydrated even with frequent washing."
+          },
+          {
+            "title": "Gentle Cleansing",
+            "description": "Removes dirt and impurities without stripping natural oils."
+          },
+          {
+            "title": "Fresh Fragrance",
+            "description": "Leaves a long-lasting pleasant scent after every wash."
+          }
+        ]
+      },
+      {
+        "id": "pc-3",
+        "name": "Strawberry Body Wash",
+        "description": "",
+        "image": "image/Personal-care-3.jpeg",
+        "keyIngredients": [
+          {
+            "title": "Walnut Shell Powder",
+            "description": "Fine natural exfoliant that buffs away dead skin cells gently."
+          },
+          {
+            "title": "Vitamin C",
+            "description": "Brightens complexion and reduces dullness and hyperpigmentation."
+          },
+          {
+            "title": "Kaolin Clay",
+            "description": "Absorbs excess oil and unclogs pores for clearer skin."
+          },
+          {
+            "title": "Papaya Extract",
+            "description": "Contains natural enzymes that dissolve dead skin for radiance."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Deep Exfoliation",
+            "description": "Effectively removes dead skin cells and surface impurities."
+          },
+          {
+            "title": "Brighter Complexion",
+            "description": "Reveals fresher, more radiant skin with regular use."
+          },
+          {
+            "title": "Pore Minimizing",
+            "description": "Unclogs and tightens pores for a smoother skin texture."
+          },
+          {
+            "title": "Even Skin Tone",
+            "description": "Reduces dark spots and uneven patches for uniform tone."
+          }
+        ]
+      },
+      {
+        "id": "pc-4",
+        "name": "Papaya Body Wash",
+        "description": "",
+        "image": "image/Personal-care-4.jpeg",
+        "keyIngredients": [
+          {
+            "title": "Pure Aloe Vera (98%)",
+            "description": "High-concentration aloe vera for maximum soothing benefits."
+          },
+          {
+            "title": "Cucumber Extract",
+            "description": "Cools and refreshes skin, reducing redness and irritation."
+          },
+          {
+            "title": "Hyaluronic Acid",
+            "description": "Attracts and locks in moisture for plump, hydrated skin."
+          },
+          {
+            "title": "Green Tea Extract",
+            "description": "Antioxidant-rich ingredient that fights free radical damage."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Instant Soothing",
+            "description": "Immediately calms sunburn, rashes, and skin irritation."
+          },
+          {
+            "title": "Lightweight Moisturizer",
+            "description": "Non-sticky formula perfect as a daily moisturizer."
+          },
+          {
+            "title": "Healing Properties",
+            "description": "Speeds up healing of minor cuts, burns, and skin damage."
+          },
+          {
+            "title": "Multipurpose Use",
+            "description": "Can be used on face, body, hair, and as an after-shave gel."
+          }
+        ]
+      },
+      {
+        "id": "pc-5",
+        "name": "Lavender Body Wash",
+        "description": "",
+        "image": "image/Personal-care-5.jpeg",
+        "keyIngredients": [
+          {
+            "title": "Coconut Milk",
+            "description": "Rich in fatty acids that deeply nourish and soften skin."
+          },
+          {
+            "title": "Jojoba Oil",
+            "description": "Closely mimics skin's natural sebum for perfect moisture balance."
+          },
+          {
+            "title": "Lavender Essential Oil",
+            "description": "Calming fragrance with antibacterial and skin-soothing properties."
+          },
+          {
+            "title": "Oat Extract",
+            "description": "Soothes sensitive and irritated skin with anti-inflammatory properties."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Deep Cleansing",
+            "description": "Removes dirt, oil, and impurities while respecting skin's pH."
+          },
+          {
+            "title": "Skin Nourishment",
+            "description": "Leaves skin feeling nourished and moisturized after every shower."
+          },
+          {
+            "title": "Rich Lather",
+            "description": "Produces a creamy, luxurious lather for a spa-like experience."
+          },
+          {
+            "title": "Long-lasting Fragrance",
+            "description": "Natural lavender scent that lingers for hours after bathing."
+          }
+        ]
+      },
+      {
+        "id": "pc-6",
+        "name": "Charcoal Body Wash",
+        "description": "",
+        "image": "image/Personal-care-6.jpeg",
+        "keyIngredients": [
+          {
+            "title": "Ascorbic Acid (15%)",
+            "description": "Potent Vitamin C form that brightens and evens skin tone."
+          },
+          {
+            "title": "Niacinamide",
+            "description": "Reduces pores, controls oil, and improves skin texture."
+          },
+          {
+            "title": "Ferulic Acid",
+            "description": "Stabilizes Vitamin C and enhances its antioxidant effectiveness."
+          },
+          {
+            "title": "Hyaluronic Acid",
+            "description": "Provides deep hydration and plumps skin for a youthful look."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Skin Brightening",
+            "description": "Visibly brightens dull complexion and reduces dark spots."
+          },
+          {
+            "title": "Anti-Aging",
+            "description": "Boosts collagen production to reduce fine lines and wrinkles."
+          },
+          {
+            "title": "Sun Damage Repair",
+            "description": "Helps fade sun spots and protects against UV-induced damage."
+          },
+          {
+            "title": "Antioxidant Shield",
+            "description": "Neutralizes free radicals to prevent premature skin aging."
+          }
+        ]
+      },
+      {
+        "id": "pc-7",
+        "name": "Cucumber Body Wash",
+        "description": "",
+        "image": "image/Personal-care-7.jpeg",
+        "keyIngredients": [
+          {
+            "title": "Zinc Oxide",
+            "description": "Mineral UV filter that provides broad-spectrum sun protection."
+          },
+          {
+            "title": "Titanium Dioxide",
+            "description": "Reflects harmful UVA and UVB rays from skin surface."
+          },
+          {
+            "title": "Vitamin E",
+            "description": "Antioxidant that protects skin from UV-induced oxidative stress."
+          },
+          {
+            "title": "Cucumber Extract",
+            "description": "Cools and hydrates skin under sun exposure."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Broad Spectrum SPF 50",
+            "description": "Blocks 98% of UVA and UVB radiation effectively."
+          },
+          {
+            "title": "No White Cast",
+            "description": "Lightweight, clear formula suitable for all skin tones."
+          },
+          {
+            "title": "Water Resistant",
+            "description": "Maintains protection for up to 80 minutes in water."
+          },
+          {
+            "title": "Non-Comedogenic",
+            "description": "Won't clog pores — safe for acne-prone and sensitive skin."
+          }
+        ]
+      },
+      {
+        "id": "pc-8",
+        "name": "Avocado Body Wash",
+        "description": "",
+        "image": "image/Personal-care-8.jpeg",
+        "keyIngredients": [
+          {
+            "title": "Retinol",
+            "description": "Stimulates cell renewal and collagen to reduce fine lines."
+          },
+          {
+            "title": "Caffeine",
+            "description": "Constricts blood vessels to reduce puffiness and dark circles."
+          },
+          {
+            "title": "Peptides",
+            "description": "Signal proteins that firm and tighten delicate under-eye skin."
+          },
+          {
+            "title": "Vitamin K",
+            "description": "Helps fade dark circles by improving blood circulation."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Reduces Dark Circles",
+            "description": "Visibly lightens under-eye discolouration within 4 weeks."
+          },
+          {
+            "title": "De-Puffing",
+            "description": "Reduces morning puffiness and eye bags quickly."
+          },
+          {
+            "title": "Anti-Wrinkle",
+            "description": "Smooths out crow's feet and fine lines around the eyes."
+          },
+          {
+            "title": "Intense Hydration",
+            "description": "Keeps the delicate under-eye area plump and moisturized."
+          }
+        ]
+      },
+      {
+        "id": "pc-9",
+        "name": "Japanese Cherry Blossom Body Wash",
+        "description": "",
+        "image": "image/Personal-care-9.jpeg",
+        "keyIngredients": [
+          {
+            "title": "Beeswax",
+            "description": "Forms a protective barrier that seals moisture into lips."
+          },
+          {
+            "title": "Shea Butter",
+            "description": "Rich emollient that heals and softens severely chapped lips."
+          },
+          {
+            "title": "Vitamin E Oil",
+            "description": "Repairs damaged lip skin and prevents future dryness."
+          },
+          {
+            "title": "Peppermint Oil",
+            "description": "Provides a refreshing tingle and plumps lips naturally."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Heals Chapped Lips",
+            "description": "Repairs dry, cracked lips and restores softness quickly."
+          },
+          {
+            "title": "Long-Lasting Moisture",
+            "description": "Keeps lips hydrated for up to 8 hours with one application."
+          },
+          {
+            "title": "SPF Protection",
+            "description": "Shields lips from UV damage and sunburn."
+          },
+          {
+            "title": "Natural Ingredients",
+            "description": "Free from parabens, mineral oil, and artificial flavours."
+          }
+        ]
+      },
+      {
+        "id": "pc-10",
+        "name": "Vitamin C Body Wash",
+        "description": "",
+        "image": "image/Personal-care-10.jpeg",
+        "keyIngredients": [
+          {
+            "title": "Lactic Acid",
+            "description": "Maintains natural pH balance of the intimate area."
+          },
+          {
+            "title": "Tea Tree Oil",
+            "description": "Natural antiseptic that prevents infection and odour."
+          },
+          {
+            "title": "Chamomile Extract",
+            "description": "Soothes and calms sensitive skin to prevent irritation."
+          },
+          {
+            "title": "Aloe Vera",
+            "description": "Hydrates and protects delicate intimate skin gently."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "pH Balanced (3.5–4.5)",
+            "description": "Maintains healthy vaginal flora and prevents imbalance."
+          },
+          {
+            "title": "Odour Control",
+            "description": "Neutralises odour-causing bacteria for all-day freshness."
+          },
+          {
+            "title": "Hypoallergenic",
+            "description": "Dermatologically tested and safe for sensitive skin."
+          },
+          {
+            "title": "Gentle Daily Use",
+            "description": "Mild enough for everyday use without causing dryness."
+          }
+        ]
+      },
+      {
+        "id": "pc-11",
+        "name": "Rice Water Body Wash",
+        "description": "",
+        "image": "image/Personal-care-11.jpeg",
+        "keyIngredients": [
+          {
+            "title": "Urea (25%)",
+            "description": "Keratolytic agent that softens hard skin and cracked heels."
+          },
+          {
+            "title": "Shea Butter",
+            "description": "Intensely moisturizes and repairs severely dry foot skin."
+          },
+          {
+            "title": "Peppermint Oil",
+            "description": "Refreshes and deodorises tired feet with cooling sensation."
+          },
+          {
+            "title": "Salicylic Acid",
+            "description": "Gently exfoliates calluses and thick skin on feet."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Heals Cracked Heels",
+            "description": "Visibly repairs deep cracks and rough patches within days."
+          },
+          {
+            "title": "Deep Moisturization",
+            "description": "Penetrates thick foot skin to deliver intense hydration."
+          },
+          {
+            "title": "Odour Elimination",
+            "description": "Neutralizes foot odour for freshness throughout the day."
+          },
+          {
+            "title": "Callus Softening",
+            "description": "Gradually softens hardened skin for smoother, healthier feet."
+          }
+        ]
+      },
+      {
+        "id": "pc-12",
+        "name": "Aloe Vera Body Wash",
+        "description": "",
+        "image": "image/Personal-care-12.jpeg",
+        "keyIngredients": [
+          {
+            "title": "Purified Talc",
+            "description": "Ultra-fine mineral powder that absorbs moisture effectively."
+          },
+          {
+            "title": "Zinc Stearate",
+            "description": "Improves slip and helps powder glide smoothly on skin."
+          },
+          {
+            "title": "Jasmine Fragrance",
+            "description": "Long-lasting floral scent that keeps you fresh all day."
+          },
+          {
+            "title": "Allantoin",
+            "description": "Soothes and protects skin from friction and irritation."
+          }
+        ],
+        "keyBenefits": [
+          {
+            "title": "Keeps Skin Dry",
+            "description": "Absorbs excess moisture and sweat to prevent skin rash."
+          },
+          {
+            "title": "Anti-Friction",
+            "description": "Reduces skin friction in folds and reduces chafing."
+          },
+          {
+            "title": "All-Day Freshness",
+            "description": "Long-lasting fragrance that keeps you feeling fresh."
+          },
+          {
+            "title": "Silky Smooth Finish",
+            "description": "Leaves skin with a soft, smooth, and velvety texture."
+          }
+        ]
+      }
+    ],
+    "bathsoap": [
+      {
+        "id": "bs-1",
+        "name": "Face Wash",
+        "description": "Deep cleansing formula for glowing and healthy skin.",
+        "image": "image/Skin-care-1.jpeg"
+      },
+      {
+        "id": "bs-2",
+        "name": "Moisturizer",
+        "description": "Hydrates and nourishes your skin all day long.",
+        "image": "image/Skin-care-2.jpeg"
+      },
+      {
+        "id": "bs-3",
+        "name": "Sunscreen",
+        "description": "Protects skin from harmful UV rays and sun damage.",
+        "image": "image/Skin-care-3.jpeg"
+      },
+      {
+        "id": "bs-4",
+        "name": "Serum",
+        "description": "Advanced formula for bright and youthful skin.",
+        "image": "image/Skin-care-4.jpeg"
+      },
+      {
+        "id": "bs-5",
+        "name": "Face Wash",
+        "description": "Deep cleansing formula for glowing and healthy skin.",
+        "image": "image/Skin-care-5.jpeg"
+      },
+      {
+        "id": "bs-6",
+        "name": "Moisturizer",
+        "description": "Hydrates and nourishes your skin all day long.",
+        "image": "image/Skin-care-6.jpeg"
+      },
+      {
+        "id": "bs-7",
+        "name": "Sunscreen",
+        "description": "Protects skin from harmful UV rays and sun damage.",
+        "image": "image/Skin-care-7.jpeg"
+      },
+      {
+        "id": "bs-8",
+        "name": "Serum",
+        "description": "Advanced formula for bright and youthful skin.",
+        "image": "image/Skin-care-8.jpeg"
+      }
+    ],
+    "grooming": [
+      {
+        "id": "gr-1",
+        "name": "Face Wash",
+        "description": "Deep cleansing formula for glowing and healthy skin.",
+        "image": "image/Skin-care-1.jpeg"
+      },
+      {
+        "id": "gr-2",
+        "name": "Moisturizer",
+        "description": "Hydrates and nourishes your skin all day long.",
+        "image": "image/Skin-care-2.jpeg"
+      },
+      {
+        "id": "gr-3",
+        "name": "Sunscreen",
+        "description": "Protects skin from harmful UV rays and sun damage.",
+        "image": "image/Skin-care-3.jpeg"
+      },
+      {
+        "id": "gr-4",
+        "name": "Serum",
+        "description": "Advanced formula for bright and youthful skin.",
+        "image": "image/Skin-care-4.jpeg"
+      },
+      {
+        "id": "gr-5",
+        "name": "Face Wash",
+        "description": "Deep cleansing formula for glowing and healthy skin.",
+        "image": "image/Skin-care-5.jpeg"
+      },
+      {
+        "id": "gr-6",
+        "name": "Moisturizer",
+        "description": "Hydrates and nourishes your skin all day long.",
+        "image": "image/Skin-care-6.jpeg"
+      },
+      {
+        "id": "gr-7",
+        "name": "Sunscreen",
+        "description": "Protects skin from harmful UV rays and sun damage.",
+        "image": "image/Skin-care-7.jpeg"
+      },
+      {
+        "id": "gr-8",
+        "name": "Serum",
+        "description": "Advanced formula for bright and youthful skin.",
+        "image": "image/Skin-care-8.jpeg"
+      }
+    ]
+  }
+}

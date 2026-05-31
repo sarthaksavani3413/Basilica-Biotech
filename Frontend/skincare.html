@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Care</title>
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="skincare.css">
+    <link rel="stylesheet" href="personal-care.css">
+
+</head>
+
+<body>
+
+    <!-- =========================================================
+       PRELOADER
+    ========================================================= -->
+
+    <div id="preloader">
+
+        <div class="loader-content">
+
+            <img src="image/logo.jpeg" alt="Logo">
+
+        </div>
+
+    </div>
+
+    <!-- =========================================================
+       HEADER
+    ========================================================= -->
+
+    <header>
+
+        <div class="container">
+
+            <div class="header-inner">
+
+                <!-- LOGO -->
+
+                <div class="logo">
+
+                    <img src="image/logo.jpeg" alt="Basilica Biotech Logo" style="height:50px;">
+
+                </div>
+
+                <!-- NAVIGATION -->
+
+                <nav>
+
+                    <ul>
+
+                        <li>
+                            <a href="./index.html">
+                                HOME
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./about.html">
+                                ABOUT US
+                            </a>
+                        </li>
+
+                        <li class="dropdown">
+
+                            <a href="#">
+                                PRODUCTS
+                            </a>
+
+                            <ul class="submenu">
+
+                                <li>
+                                    <a href="./skincare.html">
+                                        Skin Care
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="./hair-care.html">
+                                        Hair Care
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="./personal-care.html" class="active">
+                                        Personal Care
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="./bath-soap.html">
+                                        Bath Soap
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="./grooming.html">
+                                        Grooming
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>
+                            <a href="./manufacturing.html">
+                                MANUFACTURING
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./private-label.html">
+                                PRIVATE LABEL
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./why-us.html">
+                                WHY US
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./contact-us.html">
+                                CONTACT US
+                            </a>
+                        </li>
+
+                        <a href="#" class="btn-quote" onclick="openForm()">
+
+                            GET A QUOTE →
+
+                        </a>
+
+                    </ul>
+
+                </nav>
+
+                <!-- MOBILE MENU -->
+
+                <div class="hamburger" onclick="toggleMenu()">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- =========================================================
+       MOBILE NAVIGATION
+    ========================================================= -->
+
+    <div class="mobile-nav" id="mobileNav">
+
+        <span class="mobile-nav-close" onclick="toggleMenu()">
+
+            ✕
+
+        </span>
+
+        <div class="logo">
+
+            <img src="image/logo.jpeg" alt="Logo" style="height:130px;width:100%;">
+
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="./index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="./about.html">
+                    About Us
+                </a>
+            </li>
+
+            <li class="dropdown">
+
+                <a href="javascript:void(0)" onclick="toggleDropdown(event)">
+
+                    Products
+                    <i class="fas fa-chevron-down"></i>
+
+                </a>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="./skincare.html">
+                            Skin Care
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./hair-care.html">
+                            Hair Care
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./personal-care.html">
+                            Personal Care
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./bath-soap.html">
+                            Bath Soap
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./grooming.html">
+                            Grooming
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="./manufacturing.html">
+                    Manufacturing
+                </a>
+            </li>
+
+            <li>
+                <a href="./private-label.html">
+                    Private Label
+                </a>
+            </li>
+
+            <li>
+                <a href="./why-us.html">
+                    Why Us
+                </a>
+            </li>
+
+            <li>
+                <a href="./contact-us.html">
+                    Contact Us
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- =========================================================
+       FLOATING CONTACT
+    ========================================================= -->
+
+    <div class="floating-contact">
+
+        <div class="float-btn whatsapp">
+
+            <a href="https://wa.me/919104525207">
+
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+
+            </a>
+
+        </div>
+
+        <div class="float-btn">
+
+            <a href="tel:+919104525207">
+
+                <i class="fas fa-phone"></i>
+                Call Us
+
+            </a>
+
+        </div>
+
+        <div class="float-btn">
+
+            <a href="mailto:basilicabiotech@gmail.com">
+
+                <i class="fas fa-envelope"></i>
+                Email Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- =========================================================
+       PAGE TITLE
+    ========================================================= -->
+
+    <section class="section-title-wrap">
+
+        <h2 class="section-title">
+
+            Skin Care
+
+        </h2>
+
+        <div class="title-wave">
+
+            <svg width="150" height="30" viewBox="0 0 60 10">
+
+                <path d="M0 5 Q10 0 20 5 T40 5 T60 5" stroke="#6699CC" fill="transparent" stroke-width="1.5" />
+
+            </svg>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================================
+       PRODUCT GRID
+    ========================================================= -->
+
+    <div class="product-grid" id="productGrid">
+
+    </div>
+
+    <!-- =========================================================
+       PRODUCT MODAL
+    ========================================================= -->
+
+    <div id="productModal" class="product-modal">
+
+        <div class="modal-box">
+
+            <span class="close-modal" onclick="closeModal()">
+
+                &times;
+
+            </span>
+
+            <div class="modal-header">
+
+                <img id="mImg" class="modal-image">
+
+                <div>
+
+                    <h2 id="mTitle"></h2>
+
+                    <p id="mDesc"></p>
+
+                </div>
+
+            </div>
+
+            <div class="modal-grid">
+
+                <!-- INGREDIENTS -->
+
+                <div class="modal-section">
+
+                    <h3>
+
+                        Key Ingredients
+
+                    </h3>
+
+                    <div id="mIngredients"></div>
+
+                </div>
+
+                <!-- BENEFITS -->
+
+                <div class="modal-section">
+
+                    <h3>
+
+                        Key Benefits
+
+                    </h3>
+
+                    <div id="mBenefits"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand column -->
+                <div class="footer-brand">
+                    <div class="logo" style="margin-bottom:10px;">
+                        <img src="image/logo.jpeg" alt="Basilica Biotech Logo">
+                    </div>
+                    <p>Innovating Skincare &amp; Haircare.<br>Shaping Beauty, Naturally.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61585043405731&rdid=0n70slkfGqsjhKSm&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1bGkNb9pus%2F#"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/basilica_biotech?igsh=YnUycXF1dW85MnRz"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/basilica-biotech" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@BasilicaBiotech" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+
+                    <!-- CATALOG BUTTON -->
+                    <div class="footer-catalog">
+                        <a href="./image/Basilica Biotech - Catalogue (1).pdf" target="_blank" class="catalog-btn">
+                            📄 Download Brochure
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./skincare.html">Products</a></li>
+                        <li><a href="./manufacturing.html">Manufacturing</a></li>
+                        <li><a href="./private-label.html">Private Label</a></li>
+                        <li><a href="./why-us.html">Why Us</a></li>
+                        <li><a href="./contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Products -->
+                <div class="footer-col">
+                    <h4>OUR PRODUCTS</h4>
+                    <ul>
+                        <li><a href="./skincare.html">Skin Care</a></li>
+                        <li><a href="./hair-care.html">Hair Care</a></li>
+                        <li><a href="./personal-care.html">Personal Care</a></li>
+                        <li><a href="./bath-soap.html">Bath Soap</a></li>
+                        <li><a href="./grooming.html">Grooming</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-col">
+                    <h4>CONTACT INFO</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>9104525207<br>9104525205</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@basilicabiotech.co</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a target="_blank"
+                            href="https://www.google.com/maps/place/BASILICA+BIOTECH/@21.2051359,72.990793,17z/data=!3m2!4b1!5s0x3be0437d55313df7:0xb4cf2a00963c18d3!4m6!3m5!1s0x3be045376a2ecc15:0x89c1683e712a002c!8m2!3d21.2051309!4d72.9933679!16s%2Fg%2F11y7b1z9x9?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D">
+                            <span>Makna, Surat</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom bar -->
+            <div class="footer-bottom">
+                <p>© 2024 BASILICA BIOTECH. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- =========================================================
+       MAIN JS
+    ========================================================= -->
+
+    <script src="main.js"></script>
+
+    <!-- =========================================================
+       PRODUCT JS
+    ========================================================= -->
+
+    <script>
+
+        document.addEventListener(
+            'DOMContentLoaded',
+            loadProducts
+        );
+
+        /* =====================================================
+           LOAD PRODUCTS
+        ===================================================== */
+
+        async function loadProducts() {
+
+            try {
+
+                const res =
+                    await fetch('/api/site-data');
+
+                const data =
+                    await res.json();
+
+                const products =
+                    data.products?.skincare || [];
+
+                const container =
+                    document.getElementById(
+                        'productGrid'
+                    );
+
+                container.innerHTML = '';
+
+                products.forEach(product => {
+
+                    const ingredients =
+                        Array.isArray(product.keyIngredients)
+                            ? product.keyIngredients
+                            : [];
+
+                    const firstIngredient =
+                        ingredients.length
+                            ? ingredients[0]
+                            : null;
+
+                    container.innerHTML += `
+
+                        <div class="product-card">
+
+                            <div class="product-img">
+
+                                <img
+                                    src="/${product.image}"
+                                    alt="${product.name}"
+                                >
+
+                            </div>
+
+                            <div class="product-content">
+
+                                <h3>
+                                    ${product.name}
+                                </h3>
+
+                                <h4>
+                                    Key Ingredients
+                                </h4>
+
+                                ${firstIngredient ? `
+
+                                    <div class="ingredient-box">
+
+                                        <strong>
+                                            ${firstIngredient.title}
+                                        </strong>
+
+                                        <p>
+                                            ${firstIngredient.description.substring(0, 120)}...
+                                        </p>
+
+                                    </div>
+
+                                ` : ''}
+
+                                <button
+                                    class="view-btn"
+                                    onclick='openProductModal(${JSON.stringify(product)})'
+                                >
+
+                                    View Details
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    `;
+                });
+
+            } catch (err) {
+
+                console.log(err);
+
+            }
+
+        }
+
+        /* =====================================================
+           OPEN MODAL
+        ===================================================== */
+
+        function openProductModal(product) {
+
+            document.getElementById(
+                'productModal'
+            ).style.display = 'flex';
+
+            document.getElementById(
+                'mImg'
+            ).src = '/' + product.image;
+
+            document.getElementById(
+                'mTitle'
+            ).innerText =
+                product.name;
+
+            document.getElementById(
+                'mDesc'
+            ).innerText =
+                product.description || '';
+
+            /* INGREDIENTS */
+
+            const ingredientsContainer =
+                document.getElementById(
+                    'mIngredients'
+                );
+
+            ingredientsContainer.innerHTML = '';
+
+            (product.keyIngredients || [])
+                .forEach(item => {
+
+                    ingredientsContainer.innerHTML += `
+
+                        <div class="info-card">
+
+                            <h4>
+                                ${item.title}
+                            </h4>
+
+                            <p>
+                                ${item.description}
+                            </p>
+
+                        </div>
+
+                    `;
+
+                });
+
+            /* BENEFITS */
+
+            const benefitsContainer =
+                document.getElementById(
+                    'mBenefits'
+                );
+
+            benefitsContainer.innerHTML = '';
+
+            (product.keyBenefits || [])
+                .forEach(item => {
+
+                    benefitsContainer.innerHTML += `
+
+                        <div class="info-card">
+
+                            <h4>
+                                ${item.title}
+                            </h4>
+
+                            <p>
+                                ${item.description}
+                            </p>
+
+                        </div>
+
+                    `;
+
+                });
+
+        }
+
+        /* =====================================================
+           CLOSE MODAL
+        ===================================================== */
+
+        function closeModal() {
+
+            document.getElementById(
+                'productModal'
+            ).style.display = 'none';
+
+        }
+
+        /* =====================================================
+           OUTSIDE CLICK CLOSE
+        ===================================================== */
+
+        window.addEventListener(
+            'click',
+            function (e) {
+
+                const modal =
+                    document.getElementById(
+                        'productModal'
+                    );
+
+                if (e.target === modal) {
+
+                    closeModal();
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

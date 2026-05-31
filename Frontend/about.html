@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="about.css" />
+</head>
+
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-content">
+            <img src="image/logo.jpeg" alt="Logo">
+        </div>
+    </div>
+
+    <!-- ============================================================
+       HEADER - Logo + Desktop Navigation
+       ============================================================ -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="image/logo.jpeg" alt="Basilica Biotech Logo" style="height:50px;">
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav>
+                    <ul>
+                        <li><a href="./index.html" class="active">HOME</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li class="dropdown">
+                            <a href="#">PRODUCTS</a>
+                            <ul class="submenu">
+                                <li><a href="./skincare.html">Skin Care</a></li>
+                                <li><a href="./hair-care.html">Hair Care</a></li>
+                                <li><a href="./personal-care.html">Personal Care</a></li>
+                                <li><a href="./bath-soap.html">Bath Soap</a></li>
+                                <li><a href="./grooming.html">Grooming</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./manufacturing.html">MANUFACTURING</a></li>
+                        <li><a href="./private-label.html">PRIVATE LABEL</a></li>
+                        <li><a href="./why-us.html">WHY US</a></li>
+                        <li><a href="./contact-us.html">CONTACT US</a></li>
+                        <a href="#" class="btn-quote" onclick="openForm()">GET A QUOTE →</a>
+                    </ul>
+                </nav>
+
+                <!-- Hamburger (mobile only) -->
+                <div class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================
+       MOBILE NAVIGATION OVERLAY
+       ============================================================ -->
+    <div class="mobile-nav" id="mobileNav">
+        <span class="mobile-nav-close" onclick="toggleMenu()" aria-label="Close menu">✕</span>
+
+        <div class="logo">
+            <img src="image/logo.jpeg" alt="Basilica Biotech Logo" style="height:130px;width: 100%;">
+        </div>
+
+        <ul>
+            <li><a href="./index.html" onclick="toggleMobileMenu()">Home</a></li>
+            <li><a href="#" onclick="toggleMobileMenu()">About Us</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" onclick="toggleDropdown(event)">
+                    Products <i class="fas fa-chevron-down" style="font-size:9px;"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="./skincare.html" onclick="toggleMobileMenu()">Skin Care</a></li>
+                    <li><a href="./hair-care.html" onclick="toggleMobileMenu()">Hair Care</a></li>
+                    <li><a href="./personal-care.html" onclick="toggleMobileMenu()">Personal Care</a></li>
+                    <li><a href="./bath-soap.html" onclick="toggleMobileMenu()">Bath Soap</a></li>
+                    <li><a href="./grooming.html" onclick="toggleMobileMenu()">Grooming</a></li>
+                </ul>
+            </li>
+            <li><a href="./manufacturing.html" onclick="toggleMobileMenu()">MANUFACTURING</a></li>
+            <li><a href="./private-label.html" onclick="toggleMobileMenu()">Private Label</a></li>
+            <li><a href="./why-us.html" onclick="toggleMobileMenu()">Why Us</a></li>
+            <li><a href="./contact-us.html" onclick="toggleMobileMenu()">Contact Us</a></li>
+
+        </ul>
+
+        <a href="#" class="btn-quote btn-primary" style="margin-top:12px; justify-content:center;"
+            onclick="openForm()">GET A QUOTE →</a>
+    </div>
+
+    <div class="quote-modal" id="quoteModal">
+
+        <div class="quote-box">
+
+            <span class="close-btn" onclick="closeForm()">✕</span>
+
+            <h3>GET A FREE QUOTE</h3>
+
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="text" id="phone" placeholder="Mobile Number">
+            <input type="email" id="email" placeholder="Email Address">
+            <textarea id="requirement" placeholder="Your Requirement"></textarea>
+
+            <button onclick="sendWhatsApp()">SUBMIT NOW →</button>
+
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+       FLOATING CONTACT BUTTONS - Fixed right side
+       ============================================================ -->
+    <div class="floating-contact">
+        <div class="float-btn whatsapp">
+            <a href="https://wa.me/919104525207">
+                <i class="fab fa-whatsapp"></i>WhatsApp
+            </a>
+        </div>
+        <div class="float-btn">
+            <a href="tel:+919104525207">
+                <i class="fas fa-phone"></i>Call Us
+            </a>
+        </div>
+        <div class="float-btn">
+            <a href="mailto:basilicabiotech@gmail.com">
+                <i class="fas fa-envelope"></i>Email Us
+            </a>
+        </div>
+    </div>
+
+    <!-- =========================
+        VISION MISSION
+    ========================== -->
+    <section class="vision-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Vision & Mission</h2>
+            </div>
+
+            <div class="vision-grid">
+                <!-- IMAGE -->
+                <div class="vision-image">
+                    <img src="./image/Personal-care-1.jpeg" alt="">
+                </div>
+                <!-- CARD -->
+                <div class="vision-card purple-box">
+                    <div class="vision-content">
+                        <i class="fa-solid fa-people-group"></i>
+                        <h3>Vision</h3>
+                        <p>
+                            Prioritizing customer satisfaction,
+                            continuously innovate the cosmetic
+                            industry with innovative, high-quality
+                            products and become a GLOBAL LEADER
+                            IN EXCELLENCE.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="vision-card purple-box">
+                    <div class="vision-content">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <h3>Mission</h3>
+                        <p>
+                            Continuously innovating to deliver a
+                            superior cosmetic experience, guided
+                            by our commitment to customer
+                            satisfaction. The focus remains on
+                            crafting cosmetics that are not
+                            just good but catalysts in customers'
+                            self-enhancement.
+                        </p>
+                    </div>
+                </div>
+                <!-- IMAGE -->
+                <div class="vision-image">
+                    <img src="./image/Personal-care-2.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+        ABOUT STATS
+  ========================== -->
+    <section class="stats-section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+
+            <div class="stats-box">
+                <div class="stat-item">
+                    <h3>1,456,500</h3>
+                    <p>Bottles Filling Monthly</p>
+                </div>
+
+                <div class="stat-item">
+                    <h3>1,110,200</h3>
+                    <p>Tubes Filling Yearly</p>
+                </div>
+
+                <div class="stat-item">
+                    <h3>150,000KG</h3>
+                    <p>Batch Qty Monthly Capacity</p>
+                </div>
+
+                <div class="stat-item">
+                    <h3>70%</h3>
+                    <p>Liquid Product Capacity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+     CORE VALUES SECTION
+═══════════════════════════════════════════════════════════════ -->
+    <section class="core-values-section" id="core-values" aria-label="Core Values">
+        <div class="core-container">
+            <div class="cv-wrapper">
+
+                <!-- ════════════════════════════════════════════
+           LEFT — STAGGERED 5-CARD GRID
+      ════════════════════════════════════════════ -->
+                <div class="cv-cards-area">
+                    <div class="cv-grid">
+
+                        <!-- ── Card 1: Customer Satisfaction  (col-A, row-1) ── -->
+                        <article class="cv-card cv-card--customer fade-up d1" aria-label="Customer Satisfaction">
+                            <div class="cv-icon" aria-hidden="true">
+                                <!-- Puzzle + person: customer satisfaction icon -->
+                                <svg viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Person silhouette -->
+                                    <circle cx="29" cy="16" r="7" />
+                                    <!-- Body -->
+                                    <path d="M14 42c0-8.284 6.716-15 15-15s15 6.716 15 15" />
+                                    <!-- Puzzle piece on shoulder -->
+                                    <rect x="10" y="30" width="10" height="10" rx="2" />
+                                    <path d="M20 34 Q23 34 23 37 Q23 40 20 40" />
+                                    <path d="M14 30 Q14 27 17 27 Q20 27 20 30" />
+                                </svg>
+                            </div>
+                            <span class="cv-label">Customer<br>Satisfaction</span>
+                        </article>
+
+                        <!-- ── Card 2: Innovation  (col-B, row-1, drops lower) ── -->
+                        <article class="cv-card cv-card--innovation fade-up d2" aria-label="Innovation">
+                            <div class="cv-icon" aria-hidden="true">
+                                <!-- Brain with circuit / AI innovation -->
+                                <svg viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22 10c-6.627 0-12 5.373-12 12 0 3.7 1.68 7.014 4.335 9.24C12.584 32.887 11 35.76 11 39c0 1.105.895 2 2 2h2v4a2 2 0 002 2h4a2 2 0 002-2V28.5" />
+                                    <path
+                                        d="M36 10c6.627 0 12 5.373 12 12 0 3.7-1.68 7.014-4.335 9.24C45.416 32.887 47 35.76 47 39c0 1.105-.895 2-2 2h-2v4a2 2 0 01-2 2h-4a2 2 0 01-2-2V28.5" />
+                                    <!-- Center brain line -->
+                                    <line x1="29" y1="10" x2="29" y2="45" />
+                                    <!-- Circuit nodes -->
+                                    <circle cx="21" cy="22" r="2" />
+                                    <circle cx="37" cy="22" r="2" />
+                                    <circle cx="21" cy="32" r="2" />
+                                    <circle cx="37" cy="32" r="2" />
+                                    <line x1="23" y1="22" x2="27" y2="22" />
+                                    <line x1="31" y1="22" x2="35" y2="22" />
+                                    <line x1="23" y1="32" x2="27" y2="32" />
+                                    <line x1="31" y1="32" x2="35" y2="32" />
+                                </svg>
+                            </div>
+                            <span class="cv-label">Innovation</span>
+                        </article>
+
+                        <!-- ── Card 3: Excellence  (col-C, spans rows, HIGHLIGHTED) ── -->
+                        <article class="cv-card cv-card--excellence fade-up d3" aria-label="Excellence">
+                            <div class="cv-icon" aria-hidden="true">
+                                <!-- People with thumbs-up / award -->
+                                <svg viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Three people silhouettes -->
+                                    <circle cx="16" cy="20" r="5" />
+                                    <path d="M6 40c0-5.523 4.477-10 10-10" />
+                                    <circle cx="29" cy="16" r="6" />
+                                    <path d="M16 40c0-7.18 5.82-13 13-13s13 5.82 13 13" />
+                                    <circle cx="42" cy="20" r="5" />
+                                    <path d="M42 30c5.523 0 10 4.477 10 10" />
+                                    <!-- Star / medal above center person -->
+                                    <path
+                                        d="M29 6l1.5 4.5H35l-3.75 2.7 1.5 4.5L29 15l-3.75 2.7 1.5-4.5L23 10.5h4.5L29 6z" />
+                                </svg>
+                            </div>
+                            <span class="cv-label">Excellence</span>
+                        </article>
+
+                        <!-- ── Card 4: Quality  (col-A, row-2) ── -->
+                        <article class="cv-card cv-card--quality fade-up d4" aria-label="Quality">
+                            <div class="cv-icon" aria-hidden="true">
+                                <!-- Diamond / gem icon -->
+                                <svg viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Gear / cog -->
+                                    <circle cx="29" cy="29" r="9" />
+                                    <path d="M29 10v4M29 44v4M10 29h4M44 29h4
+                         M15.5 15.5l2.8 2.8M39.7 39.7l2.8 2.8
+                         M15.5 42.5l2.8-2.8M39.7 18.3l2.8-2.8" />
+                                    <!-- Diamond overlay -->
+                                    <path d="M22 29l7-10 7 10-7 10-7-10z" />
+                                    <line x1="22" y1="29" x2="36" y2="29" />
+                                </svg>
+                            </div>
+                            <span class="cv-label">Quality</span>
+                        </article>
+
+                        <!-- ── Card 5: Integrity  (col-B, row-2) ── -->
+                        <article class="cv-card cv-card--integrity fade-up d5" aria-label="Integrity">
+                            <div class="cv-icon" aria-hidden="true">
+                                <!-- Puzzle pieces: integrity / completeness -->
+                                <svg viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Top-left piece -->
+                                    <path
+                                        d="M10 10h14v7c0 0 2-2 5-2s5 2 5 2V10h14v14h-7c0 0 2 2 2 5s-2 5-2 5h7v14H34v-7c0 0-2 2-5 2s-5-2-5-2v7H10V34h7c0 0-2-2-2-5s2-5 2-5h-7V10z" />
+                                    <circle cx="29" cy="29" r="3" />
+                                </svg>
+                            </div>
+                            <span class="cv-label">Integrity</span>
+                        </article>
+
+                    </div><!-- /cv-grid -->
+                </div><!-- /cv-cards-area -->
+
+                <!-- ════════════════════════════════════════════
+           RIGHT — LAVENDER INFO PANEL
+      ════════════════════════════════════════════ -->
+                <div class="panel">
+
+                    <h2 class="panel-title" id="panelTitle">Core Values</h2>
+
+                    <!-- Wavy underline -->
+                    <svg class="panel-underline" viewBox="0 0 80 8" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6 Q10 1 20 5 Q30 9 40 5 Q50 1 60 5 Q70 9 80 5" stroke="#7b5cbf" stroke-width="2.2"
+                            fill="none" stroke-linecap="round" />
+                    </svg>
+
+                    <p class="panel-body" id="panelBody">
+                        Basilica Biotech is committed to innovation, quality, and customer satisfaction. We create
+                        high-performance cosmetic and personal care products while maintaining complete transparency
+                        throughout every stage of manufacturing. From premium ingredients to advanced production
+                        standards, we ensure excellence, trust, and consistency in every product we deliver.
+                    </p>
+
+                </div><!-- /panel -->
+
+            </div><!-- /cv-wrapper -->
+        </div><!-- /container -->
+    </section>
+
+    <section class="subscribe-wrapper">
+        <div class="subscribe-box">
+            <h2>Subscribe to us and get the latest updates</h2>
+
+            <div class="subscribe-form">
+                <input type="email" placeholder="e.g.contact@basilicabiotech.co">
+                <button>Submit</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand column -->
+                <div class="footer-brand">
+                    <div class="logo" style="margin-bottom:10px;">
+                        <img src="image/logo.jpeg" alt="Basilica Biotech Logo">
+                    </div>
+                    <p>Innovating Skincare &amp; Haircare.<br>Shaping Beauty, Naturally.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61585043405731&rdid=0n70slkfGqsjhKSm&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1bGkNb9pus%2F#"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/basilica_biotech?igsh=YnUycXF1dW85MnRz"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/basilica-biotech" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@BasilicaBiotech" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+
+                    <!-- CATALOG BUTTON -->
+                    <div class="footer-catalog">
+                        <a href="./image/Basilica Biotech - Catalogue (1).pdf" target="_blank" class="catalog-btn">
+                            📄 Download Brochure
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./skincare.html">Products</a></li>
+                        <li><a href="./manufacturing.html">Manufacturing</a></li>
+                        <li><a href="./private-label.html">Private Label</a></li>
+                        <li><a href="./why-us.html">Why Us</a></li>
+                        <li><a href="./contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Products -->
+                <div class="footer-col">
+                    <h4>OUR PRODUCTS</h4>
+                    <ul>
+                        <li><a href="./skincare.html">Skin Care</a></li>
+                        <li><a href="./hair-care.html">Hair Care</a></li>
+                        <li><a href="./personal-care.html">Personal Care</a></li>
+                        <li><a href="./bath-soap.html">Bath Soap</a></li>
+                        <li><a href="./grooming.html">Grooming</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-col">
+                    <h4>CONTACT INFO</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>9104525207<br>9104525205</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@basilicabiotech.co</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a target="_blank"
+                            href="https://www.google.com/maps/place/BASILICA+BIOTECH/@21.2051359,72.990793,17z/data=!3m2!4b1!5s0x3be0437d55313df7:0xb4cf2a00963c18d3!4m6!3m5!1s0x3be045376a2ecc15:0x89c1683e712a002c!8m2!3d21.2051309!4d72.9933679!16s%2Fg%2F11y7b1z9x9?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D">
+                            <span>Makna, Surat</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom bar -->
+            <div class="footer-bottom">
+                <p>© 2024 BASILICA BIOTECH. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="main.js"></script>
+</body>
+
+</html>

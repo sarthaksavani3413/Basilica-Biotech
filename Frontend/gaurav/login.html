@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Basilica Biotech</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../gaurav/admin.css" />
+</head>
+
+<body class="login-page">
+
+    <div class="login-wrapper">
+
+        <!-- Left Side - Brand Section -->
+        <div class="login-brand">
+            <div class="brand-content">
+                <img src="../image/logo.jpeg" alt="Basilica Biotech" class="brand-logo">
+                <h1>Welcome to<br><span>BASILICA BIOTECH</span><br>Admin Panel</h1>
+                <p>Manage your products, images, content and business activities with ease.</p>
+            </div>
+            <div class="brand-decoration">
+                <div class="deco-circle deco-1"></div>
+                <div class="deco-circle deco-2"></div>
+                <div class="deco-circle deco-3"></div>
+            </div>
+        </div>
+
+        <!-- Right Side - Login Form -->
+        <div class="login-form-section">
+            <div class="login-card">
+
+                <div class="login-icon">
+                    <div class="icon-shield">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+
+                <h2>Admin Login</h2>
+                <p class="login-subtitle">Please enter your credentials to access the admin panel.</p>
+
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="username" name="username" placeholder="admin" required
+                                autocomplete="username">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" name="password" placeholder="••••••••" required
+                                autocomplete="current-password">
+                            <button type="button" class="toggle-pass" onclick="togglePassword()">
+                                <i class="fas fa-eye" id="eyeIcon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="errorMsg" class="error-msg" style="display:none;">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>Invalid username or password!</span>
+                    </div>
+
+                    <button type="submit" class="btn-login" id="loginBtn">
+                        <span>Login</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <div class="login-footer">
+                    <p>© 2024 BASILICA BIOTECH. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('eyeIcon');
+            if (passInput.type === 'password') {
+                passInput.type = 'text';
+                eyeIcon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                passInput.type = 'password';
+                eyeIcon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        }
+
+        async function handleLogin(e) {
+            e.preventDefault();
+            const btn = document.getElementById('loginBtn');
+            const errorMsg = document.getElementById('errorMsg');
+
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Logging in...';
+            btn.disabled = true;
+            errorMsg.style.display = 'none';
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const res = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await res.json();
+
+                if (data.success) {
+                    btn.innerHTML = '<i class="fas fa-check"></i> Success!';
+                    btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+
+                    setTimeout(() => {
+                        window.location.href = '/gaurav/dashboard';
+                    }, 800);
+                } else {
+                    errorMsg.style.display = 'flex';
+                    errorMsg.querySelector('span').textContent = data.message;
+                    btn.innerHTML = '<span>Login</span><i class="fas fa-arrow-right"></i>';
+                    btn.disabled = false;
+                    // Shake animation
+                    document.querySelector('.login-card').classList.add('shake');
+                    setTimeout(() => {
+                        document.querySelector('.login-card').classList.remove('shake');
+                    }, 600);
+                }
+            } catch (err) {
+                errorMsg.style.display = 'flex';
+                errorMsg.querySelector('span').textContent = 'Server error. Please try again.';
+                btn.innerHTML = '<span>Login</span><i class="fas fa-arrow-right"></i>';
+                btn.disabled = false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
